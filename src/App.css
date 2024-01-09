@@ -1,0 +1,233 @@
+* { 
+	margin: 0; 
+	padding: 0; 
+	box-sizing: border-box; 
+} 
+
+.container { 
+	margin: 20px; 
+	display: flex; 
+	justify-content: center; 
+	flex-wrap: wrap; 
+  transition: 0.5s ease-in;
+} 
+
+
+.container .color { 
+	margin: 12px; 
+	padding: 7px; 
+	list-style: none; 
+	cursor: pointer; 
+	text-align: center; 
+	background: #ffffff; 
+  border: none;
+	border-radius: 16px; 
+	box-shadow: 0 0px 3.5ch 0px rgb(169, 70, 255); 
+  margin: 20px;
+	transition: all 0.3s ease; 
+} 
+
+h1 { 
+	text-align: center; 
+	padding: 10px; 
+	color: rgb(123, 55, 213); 
+} 
+
+.container .color:active { 
+	transform: scale(0.95); 
+} 
+
+.color .rect-box { 
+	width: 185px; 
+	height: 188px; 
+	border-radius: 10px; 
+} 
+
+.color:hover .rect-box { 
+	filter: brightness(107%); 
+} 
+
+.color .hex-value { 
+	display: block; 
+	color: #444444; 
+	user-select: none; 
+	font-weight: 500; 
+	font-size: 1.15rem; 
+	margin: 12px 0 8px; 
+	text-transform: uppercase; 
+} 
+
+.refresh-btn { 
+	position: fixed; 
+	left: 50%; 
+	bottom: 40px; 
+	color: #fff; 
+	cursor: pointer; 
+	outline: none; 
+	font-weight: 500; 
+	font-size: 1.1rem; 
+	border-radius: 5px; 
+	background: rgb(108, 37, 179); 
+	padding: 13px 20px; 
+	border: none; 
+	transform: translateX(-50%); 
+	box-shadow: 0 0px 30px 0px grey; 
+	transition: all 0.3s ease; 
+} 
+
+.refresh-btn:hover { 
+	background: rgb(51, 4, 95); 
+} 
+
+.copied-message { 
+	margin: 10px; 
+	color: rgb(119, 0, 255); 
+	font-weight: bold; 
+	font-family: 'Courier New', Courier, monospace; 
+} 
+
+.search-container { 
+	position: relative; 
+	margin: 20px auto; 
+	width: 300px; 
+} 
+
+.search-input { 
+	width: 100%; 
+	padding: 15px; 
+	border: 2px solid #ccc; 
+	border-radius: 15px; 
+	font-size: 16px; 
+	outline: none; 
+	transition: border-color 0.3s; 
+	box-shadow: 0 0px 10px 0px #b3b2b2; 
+} 
+
+.search-input:hover { 
+	border-color: #7300ff; 
+  box-shadow: 0 0px 10px 0px #b57dff; 
+} 
+.dark-mode {
+  background-color: #210634;
+  color: #fff;
+  transition: 0.3s ease-in;
+  border: #7300ff solid;
+}
+.dark-mode .copied-message{
+  color: #e6c0ff;
+}
+.dark-mode .search-input{
+  width: 100%; 
+	padding: 15px; 
+	border: 2px solid #aa5bdf; 
+	border-radius: 15px; 
+  color: white;
+	font-size: 16px; 
+	outline: none; 
+	transition: border-color 0.3s; 
+	box-shadow: 0 0px 10px 0px #bb68ff; 
+  background-color: rgb(55, 28, 88);
+}
+
+.dark-mode .color .hex-value{
+  color: white;
+}
+.dark-mode .container .color { 
+	margin: 12px; 
+	padding: 7px; 
+	list-style: none; 
+	cursor: pointer; 
+	text-align: center; 
+	background: #2a1742; 
+	border-radius: 16px; 
+	box-shadow: 0 0px 30px 0px rgb(126, 82, 179); 
+	transition: all 0.3s ease; 
+  color: white;
+} 
+.dark-mode .search-input::placeholder{
+  color: white;
+}
+
+.dark-mode .container {
+  border: 2px solid #8346ce;
+  border-radius: 20px;
+}
+
+.dark-mode .toggle-mode-btn {
+  background-color: #444;
+  color: #fff;
+}
+
+.dark-mode .toggle-mode-btn.dark {
+  background-color: rgb(82, 62, 156);
+  color: #ffffff;
+  transition: 0.5s ease-in;
+}
+
+.toggle-btn {
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode .toggle-btn {
+  background-color: darkblue;
+}
+
+.dark-mode .toggle-circle {
+  transform: translateX(20px);
+}
+.toggle-mode-btn{
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  height: 50px;
+  width: 50px;
+  background-color: rgb(164, 138, 255);
+  margin: 10px;
+}
+.icon{
+  height: 30px;
+  width: 30px;
+  color: white;
+ 
+}
+
+
+@media screen and (max-width: 500px) { 
+	.container { 
+		margin: 10px; 
+	} 
+
+	.container .color { 
+		margin: 8px; 
+		padding: 5px; 
+		width: calc(100% / 2 - 20px); 
+	} 
+
+	.color .rect-box { 
+		width: 100%; 
+		height: 148px; 
+	} 
+
+	.color .hex-value { 
+		font-size: 1.05rem; 
+	} 
+
+	.refresh-btn { 
+		font-size: 1rem; 
+	} 
+}
